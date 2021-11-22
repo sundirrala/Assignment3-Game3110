@@ -85,6 +85,7 @@ public class GameController : MonoBehaviour
         {
             buttonList[i].GetComponentInParent<Button>().interactable = false;
         }
+        goPanel.SetActive(true);
         SetGameOverText(player + " Wins!");
     }
 

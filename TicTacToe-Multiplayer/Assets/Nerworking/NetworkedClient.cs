@@ -134,8 +134,11 @@ public class NetworkedClient : MonoBehaviour
         {
             gameSystemManager.GetComponent<GameSystemManager>().ChangeGameStates(GameStates.PlayingTicTacToe);
         }
-       
+        else if (signifier == ServerToClientSignifiers.OpponentTicTacToePlay)
+        {
+            Debug.Log("our next action item no longer beckons!!");
 
+        }
     }
 
     public bool IsConnected()
@@ -161,6 +164,8 @@ public static class ServerToClientSignifiers
 {
     public const int LoginResponse = 1;
     public const int GameSessionStarted = 2;
+    public const int OpponentTicTacToePlay = 3;
+
 }
 
 public static class LoginResponses
